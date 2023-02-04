@@ -1,5 +1,3 @@
-# Imports "random" library
-import random
 # Imports "time" library
 import time
 
@@ -9,7 +7,6 @@ print("Welcome to: Rock, Paper Scissor\n")
 def main():
 	# Input from the user
 	my_input = input("Choice: ")
-	
 	# Takes input
 	match my_input:
 		# If it's rock
@@ -25,7 +22,6 @@ def main():
 		case _:
 			print("Selection not avaliable. Retry")
 			main()
-		
 	# Choses a random number
 	num = random.randint(1, 3)
 	match num:
