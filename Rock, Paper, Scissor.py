@@ -15,11 +15,9 @@ def main():
 		# If it's rock
 		case 'Rock':
 			choice = 1
-
 		# If it's paper	
 		case 'Paper':
 			choice = 2
-
 		# If it's scissor
 		case 'Scissor':
 			choice = 3
@@ -34,15 +32,12 @@ def main():
 		# If number it's 1, rock
 		case 1:
 			print("Bot: Rock")
-
 		# If number it's 2, paper
 		case 2:
 			print("Bot: Paper")
-
 		# If number it's 1, scissor
 		case 3:
 			print("Bot: Scissor")
-
 	# Checks for every choice in rock, paper, scissor rules
 	# If it's equal, draw
 	if choice == num:
