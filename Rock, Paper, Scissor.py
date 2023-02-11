@@ -1,5 +1,7 @@
 # Imports "time" library
 import time
+# Imports "random" library
+import random
 
 # Prints welcome message
 print("Welcome to: Rock, Paper Scissor\n")
@@ -7,16 +9,20 @@ print("Welcome to: Rock, Paper Scissor\n")
 def main():
 	# Input from the user
 	my_input = input("Choice: ")
+	# Uppercases the whole word
+	my_input = my_input.upper()
+	# Deletes any spaces in the word
+	my_input = my_input.strip(' ')
 	# Takes input
 	match my_input:
 		# If it's rock
-		case 'Rock':
+		case 'ROCK':
 			choice = 1
 		# If it's paper	
-		case 'Paper':
+		case 'PAPER':
 			choice = 2
 		# If it's scissor
-		case 'Scissor':
+		case 'SCISSOR':
 			choice = 3
 		# If it's none of the above
 		case _:
@@ -52,21 +58,22 @@ def main():
 		# Checks for input
 		repeat = input("Retry? Yes/No\n")
 		# Delets the space (If there are any)
-		repeat = repeat.strip(" ")
+		repeat = repeat.strip(' ')
+		# Uppercases the whole word
+		repeat = repeat.upper()
 		# If it's yes, restart the game
-		if repeat == 'Yes':
+		if repeat == 'YES':
 			print("\nRestarting Game...")
 			time.sleep(1)
 			main()
 		# If it's no, stop the game
-		elif repeat == 'No':
+		elif repeat == 'NO':
 			# We don't talk about that...
 			print("Fu**ing loser...")
 			exit()
 		# If it's none of the above, print the condition
 		else:
 			print("Input Invalid\n")
-			time.sleep(1)
 			repeat_func()
 	# Calls the function
 	repeat_func()
